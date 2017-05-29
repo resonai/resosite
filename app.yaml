@@ -1,0 +1,21 @@
+runtime: php55
+api_version: 1
+#service: resonai
+
+handlers:
+
+# Serve static resources.
+- url: /asset
+  static_dir: asset
+
+# Serve php scripts.
+- url: /(.+\.php)$
+  script: \1
+
+- url: /(.*\.(html))$
+  static_files: \1
+  upload: .*\.html$
+
+- url: /
+  static_files: index.html
+  upload: index\.html$
