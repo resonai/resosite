@@ -1049,6 +1049,13 @@ textarea#cdn_message {
 	display:none;
 }
 
+.AllPopupForms .modal-dialog .form h4.contactSuccessMsg{
+	text-align: center;
+    color: green;
+    font-weight: bold;
+	display:none;
+}
+
 a.video_popup {
     display: none;
 }

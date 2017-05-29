@@ -58,15 +58,12 @@ var saveData = function(a) {
         type: "post",
         data: b
     }).done(function(c) {
-        console.log("send");
-				$('.suceesMsg').show();
-        /* window.location.href = "tnx.html?Lead=true"; */
+		$('.contactSuccessMsg').show();
         $("#fullName").val("");
         $("#email").val("");
         $("#phone").val("");
         $("#companyname").val("");
-				$('.close').click(function(){ $('.suceesMsg').hide(); });
-				
+		$('.close').click(function(){ $('.contactSuccessMsg').hide(); });
     }).fail(function() {
         console.log("fail")
     })

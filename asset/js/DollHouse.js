@@ -58,7 +58,6 @@ var Dhdatasave = function(a) {
         type: "post",
         data: b
     }).done(function(c) {
-        console.log("send");
         $('.suceesMsg').show();
         $("#DhFName").val("");
         $("#DhEmailId").val("");

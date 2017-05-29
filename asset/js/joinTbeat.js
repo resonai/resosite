@@ -1,8 +1,8 @@
 ﻿jQuery("#joinTbeat_submit").click(function() {
     var c = $.trim($("#FName").val()),
+        b = $("#Email_id").val(),
         e = $.trim($("#jdb_phone").val()),
-        d = $.trim($("#jdb_companyname").val()),
-        b = $("#Email_id").val();
+        d = $.trim($("#jdb_companyname").val());
     var a = 0;
     $(".error").removeClass("error");
     if ($("#joinTbeat_validation").val() != "") {} else {
@@ -13,11 +13,9 @@
         if (e != "") {
             if (!e.replace(/ /g,"").replace(/\+/g, "").replace(/-/g, "").isNumber()) {
                 $("#jdb_phone").addClass("error");
-								console.log("Ew");
                 a++
             } else {
                 if (e.length < 9) {
-									console.log("eee")
                     $("#jdb_phone").addClass("error");
                     a++
                 }
@@ -60,18 +58,14 @@ var JoinTheBeatdatasave = function(a) {
         type: "post",
         data: b
     }).done(function(c) {
-        console.log("send");
-				$('.suceesMsg').show();
+		$('.suceesMsg').show();
         $("#FName").val("");
         $("#Email_id").val("");
         $("#jdb_phone").val("");
         $("#jdb_companyname").val("")
-				$('.close').click(function() {
+		$('.close').click(function() {
             $('.suceesMsg').hide();
         });
-				
-        window.location.href = "tnx.html?Lead=true";
-        
     }).fail(function() {
         console.log("fail")
     })

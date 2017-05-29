@@ -41,15 +41,11 @@ var saveCtnData = function(a) {
         type: "post",
         data: b
     }).done(function(c) {
-        //console.log("send");
-        //window.location.href = "tnx.html?Lead=true";
-				$('.suceesMsg').show();
+		$('.contactSuccessMsg').show();
         $("#cnd_FirstName").val("");
         $("#cnd_email").val("");
         $("#cdn_message").val("")
-				$('.close').click(function(){ $('.suceesMsg').hide(); });
-				
-				
+		$('.close').click(function(){ $('.contactSuccessMsg').hide(); });
     }).fail(function() {
         console.log("fail")
     })
