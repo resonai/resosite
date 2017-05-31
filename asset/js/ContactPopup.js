@@ -2,6 +2,7 @@
     var c = $.trim($("#fullName").val()),
         b = $.trim($("#phone").val()),
         e = $.trim($("#companyname").val()),
+        jj = $.trim($("#message").val()),
         d = $("#email").val();
     var a = 0;
     $(".error").removeClass("error");
@@ -40,6 +41,7 @@
                 email: d,
                 phone: b,
                 companyname: e,
+                message: jj
             })
         }
     }
@@ -51,6 +53,7 @@ var saveData = function(a) {
         email: a.email,
         phone: a.phone,
         companyname: a.companyname,
+        message: a.message
     };
     $.ajax({
         url: "server/popupdatasave.php",
@@ -63,7 +66,8 @@ var saveData = function(a) {
         $("#email").val("");
         $("#phone").val("");
         $("#companyname").val("");
-		$('.close').click(function(){ $('.contactSuccessMsg').hide(); });
+        $("#message").val("");
+        $('.close').click(function(){ $('.contactSuccessMsg').hide(); });
     }).fail(function() {
         console.log("fail")
     })

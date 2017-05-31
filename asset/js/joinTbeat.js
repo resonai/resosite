@@ -2,6 +2,7 @@
     var c = $.trim($("#FName").val()),
         b = $("#Email_id").val(),
         e = $.trim($("#jdb_phone").val()),
+        jj = $.trim($("#jdb_message").val()),
         d = $.trim($("#jdb_companyname").val());
     var a = 0;
     $(".error").removeClass("error");
@@ -40,6 +41,7 @@
                 Email_id: b,
                 jdb_phone: e,
                 jdb_companyname: d,
+                message: jj
             })
         }
     }
@@ -51,6 +53,7 @@ var JoinTheBeatdatasave = function(a) {
         Email_id: a.Email_id,
         jdb_phone: a.jdb_phone,
         jdb_companyname: a.jdb_companyname,
+        message: a.message
     };
     $.ajax({
         url: "server/JoinTheBeatdatasave.php",
@@ -63,6 +66,7 @@ var JoinTheBeatdatasave = function(a) {
         $("#Email_id").val("");
         $("#jdb_phone").val("");
         $("#jdb_companyname").val("")
+        $("#jdb_message").val("")
 		$('.close').click(function() {
             $('.suceesMsg').hide();
         });

@@ -2,6 +2,7 @@
     var c = $.trim($("#DhFName").val()),
         b = $("#DhEmailId").val(),
         e = $.trim($("#DhPhone").val()),
+        jj = $.trim($("#DhMessage").val()),
         d = $.trim($("#DhCompanyname").val());
     var a = 0;
     $(".error").removeClass("error");
@@ -40,6 +41,7 @@
                 DhEmailId: b,
                 DhPhone: e,
                 DhCompanyname: d,
+                DhMessage: jj
             })
         }
     }
@@ -51,6 +53,7 @@ var Dhdatasave = function(a) {
         DhEmailId: a.DhEmailId,
         DhPhone: a.DhPhone,
         DhCompanyname: a.DhCompanyname,
+        DhMessage: a.DhMessage
     };
     $.ajax({
         url: "server/Dhdatasave.php",
@@ -63,6 +66,7 @@ var Dhdatasave = function(a) {
         $("#DhEmailId").val("");
         $("#DhPhone").val("");
         $("#DhCompanyname").val("");
+        $("#DhMessage").val("");
         $('.close').click(function() {
             $('.suceesMsg').hide();
         });

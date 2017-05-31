@@ -24,6 +24,7 @@ if(isset($_POST['method'])) {
 		$dataEmail .= 'Email: ' . 				$arr[3] . '<br>';
 		$dataEmail .= 'Phone: ' . 			$arr[4] . '<br>';
 		$dataEmail .= 'Company name: ' . 			$arr[5] . '<br>';
+		$dataEmail .= 'Message: ' . 			$arr[6] . '<br>';
 		
 		$headers = ""; 
 		$headers .= "Content-Type: text/html; charset=utf-8\r\n"; 
